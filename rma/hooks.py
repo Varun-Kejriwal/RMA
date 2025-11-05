@@ -6,7 +6,7 @@ app_description = "Simple RMA module for ERPNext"
 app_license = "MIT"
 
 # include js in desk
-app_include_js = "/assets/rma/js/rma_request.js"
+#app_include_js = "/assets/rma/js/rma_request.js"
 
 # doctype js
 doctype_js = {
