@@ -1,0 +1,27 @@
+﻿{
+  "doctype": "DocType",
+  "name": "RMA Request",
+  "module": "RMA",
+  "custom": 1,
+  "fields": [
+    {"fieldname":"serial_number","label":"Serial Number","fieldtype":"Link","options":"Serial No","reqd":1},
+    {"fieldname":"item_name","label":"Item Name","fieldtype":"Data","read_only":1},
+    {"fieldname":"customer","label":"Customer","fieldtype":"Link","options":"Customer","read_only":1},
+    {"fieldname":"date_of_sale","label":"Date of Sale","fieldtype":"Date","read_only":1},
+    {"fieldname":"warranty_expiry_date","label":"Warranty Expiry Date","fieldtype":"Date","read_only":1},
+    {"fieldname":"warranty_status","label":"Warranty Status","fieldtype":"Select","options":"Available\nExpired","read_only":1},
+    {"fieldname":"action","label":"Action","fieldtype":"Select","options":"Repair\nReplace","reqd":1},
+    {"fieldname":"reason","label":"Reason / Note","fieldtype":"Small Text"},
+    {"fieldname":"new_serial_number","label":"New Serial Number","fieldtype":"Link","options":"Serial No"},
+    {"fieldname":"replacement_date","label":"Replacement Date","fieldtype":"Date"},
+    {"fieldname":"branch","label":"Branch","fieldtype":"Link","options":"Branch"},
+    {"fieldname":"submitted_by","label":"Submitted By","fieldtype":"Link","options":"User","read_only":1},
+    {"fieldname":"approval_status","label":"Approval Status","fieldtype":"Select","options":"Pending\nApproved\nRejected","default":"Pending"},
+    {"fieldname":"system_status","label":"System Status","fieldtype":"Select","options":"Draft\nSubmitted\nApproved\nRejected\nCompleted","default":"Draft"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "permlevel": 0, "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1, "amend": 1},
+    {"role": "RMA Staff", "permlevel": 0, "read": 1, "write": 1, "create": 1},
+    {"role": "CEO", "permlevel": 0, "read": 1, "write": 1, "create": 0, "submit": 1, "cancel": 1}
+  ]
+}

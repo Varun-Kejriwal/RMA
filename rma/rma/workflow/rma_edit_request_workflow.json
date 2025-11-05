@@ -1,0 +1,14 @@
+﻿{
+  "workflow_name":"RMA Edit Request Workflow",
+  "document_type":"RMA Edit Request",
+  "workflow_states":[
+    {"state":"Pending","idx":1},
+    {"state":"Approved","idx":2},
+    {"state":"Rejected","idx":3}
+  ],
+  "workflow_actions":[
+    {"action":"Approve","state":"Approved"},
+    {"action":"Reject","state":"Rejected"}
+  ],
+  "states":[]
+}
